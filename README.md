@@ -101,3 +101,9 @@ cin >> base >> altezza;
 ```
 
 I dati richiesti possono essere separati anche dal ritorno a capo.
+
+### Strutture di iterazione
+
+* con controllo della condizione (postcondizionale) `do { } while ( )`
+* con controllo della condizione (precondizionale) `while ( ) { }`
+* enumerativa `for ( ; ; ) { }`
