@@ -18,7 +18,7 @@ oppure
 gcc  -E prova.c > prova1.c 
 ```
 
-ottengo nel file di output specificato (con l'opzione `\-o`) il sorgente C con gli include espansi; il file `prova1.c` conterrà quanto effettivamente presentato al compilatore C dopo la fase di pre\-compilazione
+ottengo nel file di output specificato (con l'opzione `-o`) il sorgente C con gli include espansi; il file `prova1.c` conterrà quanto effettivamente presentato al compilatore C dopo la fase di pre\-compilazione
 
 ----
 #### -E -C
@@ -52,7 +52,7 @@ oppure
 gcc -o prova.s -S prova.c 
 ```
  
-ottengo nel file di output specificato (con l'opzione `\-o`) il sorgente assembly; il file `prova.s` contiene il sorgente pronto per essere compilato dall'assembler.
+ottengo nel file di output specificato (con l'opzione `-o`) il sorgente assembly; il file `prova.s` contiene il sorgente pronto per essere compilato dall'assembler.
 
 ----
 #### -c
@@ -69,7 +69,7 @@ oppure
 gcc -o prova.o -c prova.c 
 ```
 
-ottengo nel file di output specificato (con l'opzione `\-o`) il modulo oggetto; il file `prova.o` contiene il modulo oggetto rilocabile pronto per essere *link\-editato* dal linker.
+ottengo nel file di output specificato (con l'opzione `-o`) il modulo oggetto; il file `prova.o` contiene il modulo oggetto rilocabile pronto per essere *link\-editato* dal linker.
 
 ----
 #### (omettendo opzioni)
@@ -80,4 +80,4 @@ Invocando:
 gcc -o prova prova.c 
 ```
 
-ottengo nel file di output specificato (con l'opzione `\-o`) il programma eseguibile 
+ottengo nel file di output specificato (con l'opzione `-o`) il programma eseguibile 
