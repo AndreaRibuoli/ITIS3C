@@ -81,3 +81,23 @@ gcc -o prova prova.c
 ```
 
 ottengo nel file di output specificato (con l'opzione `-o`) il programma eseguibile 
+
+### Lettura di più dati con un'unica operazione
+
+----
+#### C
+
+``` c
+scanf("%d %d", &base, &altezza);
+```
+
+L'*Invio* (ritorno a capo) da parte dell'utente termina la lettura.
+
+----
+#### C++
+
+``` cpp
+cin >> base >> altezza;
+```
+
+I dati richiesti possono essere separati anche dal ritorno a capo.
