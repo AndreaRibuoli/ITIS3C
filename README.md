@@ -107,3 +107,58 @@ I dati richiesti possono essere separati anche dal ritorno a capo.
 * con controllo della condizione (postcondizionale) `do { } while ( );`
 * con controllo della condizione (precondizionale) `while ( ) { }`
 * enumerativa `for ( ; ; ) { }`
+
+----
+
+### Funzioni in C
+
+**esempio.h**
+
+``` C
+void esempio(int);
+```
+
+**esempio.c**
+
+``` C
+#include <stdio.h>
+#include "esempio.h"
+
+void esempio(int volte) {
+  for(int i=0; i<volte; i++) 
+    printf("Ciao!\n");
+}
+```
+
+**principale.c**
+
+``` C
+#include "esempio.h"
+
+int main(int argc, char *argv[]) {
+	int value = 1;
+	if (argc > 1) {
+	  sscanf(argv[1], "%d", &value);
+	}  
+	esempio(value);	
+	return 0;
+}
+```
+
+I passi di compilazione sono 3:
+
+``` sh
+gcc -c esempio.c
+gcc -c principale.c
+gcc -o principale esempio.o principale.o
+```
+
+Invocando `./principale 5` otteniamo:
+
+```
+Ciao!
+Ciao!
+Ciao!
+Ciao!
+Ciao!
+```
