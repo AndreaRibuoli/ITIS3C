@@ -133,6 +133,7 @@ void esempio(int volte) {
 **principale.c**
 
 ``` C
+#include <stdio.h>
 #include "esempio.h"
 
 int main(int argc, char *argv[]) {
