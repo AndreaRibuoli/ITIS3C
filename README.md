@@ -163,3 +163,41 @@ Ciao!
 Ciao!
 Ciao!
 ```
+
+-----
+
+**es7.h**
+
+``` C
+float prezzoScontato(float, float);
+```
+
+**es7.c**
+
+``` C
+#include "es7.h"
+float prezzoScontato(float prezzo, float sconto) { return ( prezzo - (( sconto/100 ) * prezzo ) ); }
+
+```
+
+**test_es7.c**
+
+``` C
+ #include <stdio.h>
+ #include "es7.h"
+ 
+ int main(void) {
+   float prezzo, sconto;
+   printf("Forniscimi il prezzo e lo sconto applicato al prodotto:\n");
+   scanf("%f %f", &prezzo, &sconto);	 
+   printf("Il prezzo scontato è %.2f €\n", prezzoScontato(prezzo, sconto));
+ }
+```
+
+Compilo il tutto con:
+
+```
+ gcc -c test_es7.c
+ gcc -c es7.c
+ gcc -o es7 test_es7.o es7.o 
+```
